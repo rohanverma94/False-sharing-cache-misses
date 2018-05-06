@@ -19,17 +19,13 @@ void *ShowMesage(void *tid) {
 }
 
 void *ChangeMessage() {
-  strcpy(msg, "I know threads, duhh aa");
+  //This doesn't work
+  strcpy(msg, "I'm a noob, duhh aa");
 }
 
 int main() {
-  pthread_t thr;
-
-  pthread_create(&thr, NULL, Child_Thread, NULL); // Spawn thread
-
-  Parent_Thread();
-
-  pthread_exit(NULL);
+ ShowMessage();
+ ChangeMessage();
 }
 
 ```
