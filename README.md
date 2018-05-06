@@ -18,16 +18,15 @@ void *ShowMessage() {
   printf("A few seconds later msg = '%s'\n", msg);
 }
 
-void *ChangeMessage() {
+void *ModifyMessage() {
   //This does work in theory, in reality let see further.
   strcpy(msg, "I'm a noob, duhh aa");
 }
 
 int main() {
  ShowMessage();
- ChangeMessage();
+ ModifyMessage();
 }
-
 ```
 Output:
 ```
@@ -36,6 +35,8 @@ rohan@hackerspace-$ ./Manipulator
 Address of msg is 0000000000403020 and msg:'uninitialized'  
 A few seconds later msg = 'uninitialized'  
 ```
+So this doesn't work work, our program desn't work in reality, the variable ```msg``` doen't get modified.
+
 This is a message manipulator based upon threads
 
 ```
