@@ -12,7 +12,7 @@ So consider this example where we want to change the global variable  ```msg``` 
 
 char msg[50] = "uninitialized";
 
-void *ShowMesage(void *tid) {
+void *ShowMesage() {
   printf("Address of msg is %p and msg:'%s'\n", &msg, msg);
   sleep(2);
   printf("A few seconds later msg = '%s':\n", msg);
@@ -27,6 +27,10 @@ int main() {
  ShowMessage();
  ChangeMessage();
 }
+
+```
+Output:
+```
 
 ```
 This is a message manipulator based upon threads
