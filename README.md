@@ -7,6 +7,30 @@ Before going to discuss the contents of the repository, I have to discuss some s
 
 So consider this example where we want to change the global variable  ```msg```  by using function ChangeMessage.
 ```
+#include <stdio.h>
+#include <unistd.h>
+
+char msg[50] = "uninitialized";
+
+void *ShowMesage(void *tid) {
+  printf("Address of msg is %p and msg:'%s'\n", &msg, msg);
+  sleep(2);
+  printf("A few seconds later msg = '%s':\n", msg);
+}
+
+void *ChangeMessage() {
+  strcpy(msg, "I know threads, duhh aa");
+}
+
+int main() {
+  pthread_t thr;
+
+  pthread_create(&thr, NULL, Child_Thread, NULL); // Spawn thread
+
+  Parent_Thread();
+
+  pthread_exit(NULL);
+}
 
 ```
 This is a message manipulator based upon threads
