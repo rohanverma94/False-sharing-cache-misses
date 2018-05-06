@@ -1,10 +1,11 @@
 # False-sharing-cache-misses
 This demonstrates the cache-misses introduced due to multi-core system
 
-This implementation is based on multi-threading because the threads share same address space as compared to processes which have different address space.
+This implementation is based on multi-threading because the threads share same address space as compared to processes which inherently have different address space.
 
 Before going to discuss the contents of the repository, I have to discuss some supplement code and concepts:
 
+So consider this example where we want to change the global variable  ```msg```  by using function ChangeMessage.
 ```
 
 ```
