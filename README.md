@@ -12,14 +12,14 @@ So consider this example where we want to change the global variable  ```msg``` 
 
 char msg[50] = "uninitialized";
 
-void *ShowMesage() {
+void *ShowMessage() {
   printf("Address of msg is %p and msg:'%s'\n", &msg, msg);
   sleep(2);
-  printf("A few seconds later msg = '%s':\n", msg);
+  printf("A few seconds later msg = '%s'\n", msg);
 }
 
 void *ChangeMessage() {
-  //This doesn't work
+  //This does work in theory, in reality let see further.
   strcpy(msg, "I'm a noob, duhh aa");
 }
 
@@ -31,7 +31,10 @@ int main() {
 ```
 Output:
 ```
-
+rohan@hackerspace-$ g++ Demo.cpp -o Manipulator  
+rohan@hackerspace-$ ./Manipulator  
+Address of msg is 0000000000403020 and msg:'uninitialized'  
+A few seconds later msg = 'uninitialized'  
 ```
 This is a message manipulator based upon threads
 
