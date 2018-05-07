@@ -39,9 +39,9 @@ int main() {
  ModifyMessage();
 }
 ```
-Output:
+### Output:
 ```
-rohan@hackerspace-$ g++ Demo.cpp -o Manipulator  
+rohan@hackerspace-$ g++ Demo1.cpp -o Manipulator  
 rohan@hackerspace-$ ./Manipulator  
 Address of msg is 0000000000403020 and msg:'uninitialized'  
 A few seconds later msg = 'uninitialized'  
@@ -61,6 +61,7 @@ So this doesn't work in reality, the variable ```msg``` doen't get modified.
 * This time, we will make a thread for function ```ShowMessage()```, for this code we will call this function as ```void *Child_Thread(void *tid)``` , where ```tid``` is Thread ID.
 * Because threads share a common address space, the threads ChildThread and ParentThread are oblivious to each others share of memory.
 * Threads are used to share the CPU time of application by leveraging the use of modern hardware i.e the threads can execute concurrently on single/multiple CPUs.
+* Because the threads can run in parallel, the function ```ParentThread``` executes concurrently with thread ```ChildThread```.
 
 #### Code :
 
@@ -95,3 +96,10 @@ int main() {
 
 ```
 
+### Output:
+```
+rohan@hackerspace-$ g++ Demo2.cpp -o Manipulator  
+rohan@hackerspace-$ ./Manipulator  
+Address of msg is 0000000000403020 and msg:'uninitialized'  
+A few seconds later msg = 'uninitialized'  
+```
