@@ -5,7 +5,9 @@ This implementation is based on multi-threading because the threads share same a
 
 Before going to discuss the contents of the repository, I have to discuss some supplement code and concepts:
 
-So consider this example where we want to change the global variable  ```msg```  by using function ChangeMessage. The program works as follows:
+So consider this example where we want to change the global variable  ```msg```  by using function ```ModifyMessage```. 
+
+The supplement code works as follows:
 
 * There are two function , namely ```ShowMessage()``` and ```ModifyMessage()``` which were to behave as per their name suggests.
 * The ```ShowMessage()``` has ```sleep(2)```  , so the function ```ShowMessage()``` starts with ```printf``` then sleeps for 2 seconds.
