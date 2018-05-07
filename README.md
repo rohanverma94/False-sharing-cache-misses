@@ -55,6 +55,8 @@ So this doesn't work in reality, the variable ```msg``` doen't get modified.
 
 * Because of the above reason, the ```msg``` won't get modified before it reaches the last ```printf``` in function ```ShowMessage()```.
 
+## Supplement Code #2 ( This works )
+
 This is a message manipulator based upon threads
 
 ```
