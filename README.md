@@ -41,7 +41,7 @@ int main() {
 ```
 ### Output:
 ```
-rohan@hackerspace-$ g++ Demo1.cpp -o Manipulator  
+rohan@hackerspace-$ gcc Demo1.cpp -o Manipulator  
 rohan@hackerspace-$ ./Manipulator  
 Address of msg is 0000000000403020 and msg:'uninitialized'  
 A few seconds later msg = 'uninitialized'  
