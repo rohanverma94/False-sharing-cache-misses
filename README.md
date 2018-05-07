@@ -7,7 +7,7 @@ Before going to discuss the contents of the repository, I have to discuss some s
 
 So consider this example where we want to change the global variable  ```msg```  by using function ```ModifyMessage```. 
 
-## Supplement Code
+## Supplement Code #1
 
 The supplement code works as follows:
 
@@ -47,7 +47,7 @@ A few seconds later msg = 'uninitialized'
 ```
 So this doesn't work in reality, the variable ```msg``` doen't get modified.
 
-## Why supplement code doesn't work ? 
+## Why supplement code #1 doesn't work ? 
 
 This is a message manipulator based upon threads
 
