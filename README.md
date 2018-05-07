@@ -49,6 +49,12 @@ So this doesn't work in reality, the variable ```msg``` doen't get modified.
 
 ## Why supplement code #1 doesn't work ? 
 
+* The function ```ShowMessage()```  has ```sleep(2)```  which basicaly makes entire conrol of the code sleep for 2 seconds.
+
+* The main function has ```ShowMessage()``` & ```ModifyMessage()``` arranged serially such that the function  ```ModifyMessage()``` only executes when function ```ShowMessage()``` has done executing.
+
+* Because of the above reason, the ```msg``` won't get modified before it reaches the last ```printf``` in function ```ShowMessage()```.
+
 This is a message manipulator based upon threads
 
 ```
