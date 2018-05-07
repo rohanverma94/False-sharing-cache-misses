@@ -69,6 +69,7 @@ So this doesn't work in reality, the variable ```msg``` doen't get modified.
 #include <stdio.h>
 #include <unistd.h>
 #include <pthread.h>
+#include <string.h>
 
 char msg[100] = "uninitialized";
 
