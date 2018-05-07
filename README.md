@@ -13,6 +13,7 @@ The supplement code works as follows:
 * The ```ShowMessage()``` has ```sleep(2)```  , so the function ```ShowMessage()``` starts with ```printf``` then sleeps for 2 seconds.
 * During this time the ```ModifyMessage()``` can jump in and modify the variable ```msg``` and return back the control to ```ShowMessage()```.
 * Finally the other ```printf``` with modified message get excecuted and we are done.  
+
 ```
 #include <stdio.h>
 #include <unistd.h>
@@ -42,7 +43,7 @@ rohan@hackerspace-$ ./Manipulator
 Address of msg is 0000000000403020 and msg:'uninitialized'  
 A few seconds later msg = 'uninitialized'  
 ```
-So this doesn't work work, our program desn't work in reality, the variable ```msg``` doen't get modified.
+So this doesn't work in reality, the variable ```msg``` doen't get modified.
 
 This is a message manipulator based upon threads
 
