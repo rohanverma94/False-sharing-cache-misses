@@ -31,7 +31,7 @@ void *ShowMessage() {
 
 void *ModifyMessage() {
   //This does work in theory, in reality let see further.
-  strcpy(msg, "I'm a noob, duhh aa");
+  strcpy(msg, "I'm a noob, live with it.");
 }
 
 int main() {
