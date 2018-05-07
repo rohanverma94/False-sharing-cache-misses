@@ -57,7 +57,11 @@ So this doesn't work in reality, the variable ```msg``` doen't get modified.
 
 ## Supplement Code #2 ( This works )
 
-This is a message manipulator based upon threads
+* This time, we will make a thread for function ```ShowMessage()```, for this code we will call this function as ```void *Child_Thread(void *tid)``` , where ```tid``` is Thread ID.
+* Because threads share a common address space, the threads ChildThread and ParentThread are oblivious to each others share of memory.
+* Threads are used to share the CPU time of application by leveraging the use of modern hardware i.e the threads can execute concurrently on single/multiple CPUs.
+
+## Code #2
 
 ```
 #include <stdio.h>
