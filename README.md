@@ -98,8 +98,9 @@ int main() {
 
 ### Output:
 ```
-rohan@hackerspace-$ g++ Demo2.cpp -o Manipulator  
-rohan@hackerspace-$ ./Manipulator  
-Address of msg is 0000000000403020 and msg:'uninitialized'  
-A few seconds later msg = 'uninitialized'  
+rohan@hackerspace-$ gcc Demo2.cpp -lpthread
+rohan@hackerspace-$  ./a.out
+In child  thread at 0x601080: 'uninitialized':
+In parent thread at 0x601080: 'I know threads, duhh aa':
+In child  thread at 0x601080: 'I know threads, duhh aa':
 ```
