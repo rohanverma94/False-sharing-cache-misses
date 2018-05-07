@@ -16,7 +16,7 @@ The supplement code works as follows:
 * During this time the ```ModifyMessage()``` can jump in and modify the variable ```msg``` and return back the control to ```ShowMessage()```.
 * Finally the other ```printf``` with modified message get excecuted and we are done.
 
-### <Code>
+### Code
 ```
 #include <stdio.h>
 #include <unistd.h>
@@ -62,7 +62,7 @@ So this doesn't work in reality, the variable ```msg``` doen't get modified.
 * Because threads share a common address space, the threads ChildThread and ParentThread are oblivious to each others share of memory.
 * Threads are used to share the CPU time of application by leveraging the use of modern hardware i.e the threads can execute concurrently on single/multiple CPUs.
 
-### <Code> 
+### Code 
 
 ```
 #include <stdio.h>
