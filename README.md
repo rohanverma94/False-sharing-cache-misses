@@ -7,6 +7,8 @@ Before going to discuss the contents of the repository, I have to discuss some s
 
 So consider this example where we want to change the global variable  ```msg```  by using function ```ModifyMessage```. 
 
+## Supplement Code
+
 The supplement code works as follows:
 
 * There are two function , namely ```ShowMessage()``` and ```ModifyMessage()``` which were to behave as per their name suggests.
@@ -44,6 +46,8 @@ Address of msg is 0000000000403020 and msg:'uninitialized'
 A few seconds later msg = 'uninitialized'  
 ```
 So this doesn't work in reality, the variable ```msg``` doen't get modified.
+
+## Why supplement code doesn't work ? 
 
 This is a message manipulator based upon threads
 
