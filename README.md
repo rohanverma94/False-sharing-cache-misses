@@ -108,4 +108,4 @@ In child  thread at 0x601080: 'I know threads, duhh aa':
 
 ## Insights 
 
-
+Given that the threads share memory or they are oblivious to each others share of memory.
