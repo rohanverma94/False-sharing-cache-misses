@@ -105,3 +105,7 @@ In child  thread at 0x601080: 'uninitialized':
 In parent thread at 0x601080: 'I know threads, duhh aa':
 In child  thread at 0x601080: 'I know threads, duhh aa':
 ```
+
+## Insights 
+
+
