@@ -109,3 +109,9 @@ In child  thread at 0x601080: 'I know threads, duhh aa':
 ## Insights 
 
 Given that the threads share memory or they are oblivious to each others share of memory. In supplement code #2, while thread ```Child_thread``` sleeps for 2 seconds; the ```Parent_Thread``` jumps in and modify the global variable ```msg```.
+
+## Multi-Core Systems
+
+So above is the example to show that threads can modify each other memory. Now coming to multi-core system, the threads can be dispacthed to a specific cpu core, but this has to be decided at programming time. This repository shows false-sharing in caches   
+due to a multicore sytem.
+
