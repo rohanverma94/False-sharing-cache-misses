@@ -114,3 +114,4 @@ Given that the threads share memory or they are oblivious to each others share o
 
 So above is the example to show that threads can modify each other memory. Now coming to multi-core system, the threads can be dispacthed to a specific cpu core, but this has to be decided at programming time. This repository shows false-sharing in caches due to a multicore sytem.
 
+***False-sharing*** is done on the thread by sharing of thread's local data 
