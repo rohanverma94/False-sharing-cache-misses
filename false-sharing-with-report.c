@@ -18,7 +18,7 @@
  * different numa nodes in the system.
  *
  * For example, on a system with 4 numa nodes:
- * ./false_sharing.exe 2
+ * ./false_sharing 2
  * 12165 mticks, reader_thd (thread 6), on node 2 (cpu 144).
  * 12403 mticks, reader_thd (thread 5), on node 1 (cpu 31).
  * 12514 mticks, reader_thd (thread 4), on node 0 (cpu 96).
@@ -28,7 +28,7 @@
  * 13049 mticks, lock_th (thread 3), on node 3 (cpu 169).
  * 13050 mticks, lock_th (thread 2), on node 2 (cpu 49).
  * 
- * # ./no_false_sharing.exe 2
+ * # ./no_false_sharing 2
  * 1918 mticks, reader_thd (thread 4), on node 0 (cpu 96).
  * 2432 mticks, reader_thd (thread 7), on node 3 (cpu 170).
  * 2468 mticks, reader_thd (thread 6), on node 2 (cpu 146).
